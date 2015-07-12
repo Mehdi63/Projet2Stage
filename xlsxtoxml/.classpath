@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="C:/Users/elhaddad/Downloads/poi-bin-3.12-20150511/poi-3.12/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/elhaddad/Downloads/poi-bin-3.12-20150511/poi-3.12/xmlbeans-2.3.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/elhaddad/Downloads/poi-3.12/poi-3.12-20150511.jar"/>
+	<classpathentry kind="lib" path="C:/Users/elhaddad/Downloads/poi-3.12/poi-examples-3.12-20150511.jar"/>
+	<classpathentry kind="lib" path="C:/Users/elhaddad/Downloads/poi-3.12/poi-excelant-3.12-20150511.jar"/>
+	<classpathentry kind="lib" path="C:/Users/elhaddad/Downloads/poi-3.12/poi-ooxml-3.12-20150511.jar"/>
+	<classpathentry kind="lib" path="C:/Users/elhaddad/Downloads/poi-3.12/poi-ooxml-schemas-3.12-20150511.jar"/>
+	<classpathentry kind="lib" path="C:/Users/elhaddad/Downloads/poi-3.12/poi-scratchpad-3.12-20150511.jar"/>
+	<classpathentry kind="lib" path="C:/Users/elhaddad/Downloads/ooxml-schemas-1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/elhaddad/Downloads/eclipse/plugins/org.eclipse.m2e.archetype.common_1.5.1.20150109-1819/jdom-1.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/elhaddad/Downloads/sonar-plugin-api-1.10RC1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
