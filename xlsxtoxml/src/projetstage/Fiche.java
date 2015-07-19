@@ -9,7 +9,7 @@ import org.jdom.Element;
 class Fiche {
    static final Map<String, Integer> ELEMENTS = new HashMap<>();
    static {
-      ELEMENTS.put("ezpublish_id", 0);
+      ELEMENTS.put("ezpublish_id", Item.ZERO);
       ELEMENTS.put("orga_id", Item.I);
       ELEMENTS.put("entity_id", Item.II);
       ELEMENTS.put("entity", Item.III);

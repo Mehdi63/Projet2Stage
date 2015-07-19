@@ -12,17 +12,17 @@ public class Interface {
    }
 
    public static void main(String[] args) throws IOException {
-         String xlsxfile1 = "C:/Users/elhaddad/Documents/2014-07-24-01-Export.xlsx";
-         String xmlfile = "C:/Users/elhaddad/Documents/Fiche Techneo.xml";
-         String[][] res1;
-         res1 = EnhancedXSSFSheet.tomatrix(xlsxfile1);
-         int numRows = res1.length;
-         int numCols = res1[Item.ZERO].length;
+         String xlsxfile = "C:/Users/elhaddad/Documents/2014-07-24-01-Export.xlsx";
+         String xmlfile = "C:/Users/elhaddad/Documents/Fiche_Regroupé.xml";
+         String[][] res;
+         res = EnhancedXSSFSheet.tomatrix(xlsxfile);
+         int numRows = res.length;
+         int numCols = res[Item.ZERO].length;
          String[][] resRegroupe = new String[Item.XII
-               + Item.COMPETANCE.length][numCols];
-         resRegroupe = Algo.initialiser(numCols);
-         resRegroupe = Algo.traiter(numRows, res1, resRegroupe);
-         Algo.remplir(resRegroupe, xmlfile);
-         LOG.info("'Techneo Fiche' file has been generated.");
+               + Item.COMPETENCES.length][numCols];
+         resRegroupe = Algo1.initialiser(numCols);
+         resRegroupe = Algo1.traiter(numRows, res, resRegroupe);
+         Algo2.remplir(resRegroupe, xmlfile);
+         LOG.info("'Techneo Fiche' file(s) has been generated.");
    }
 }
