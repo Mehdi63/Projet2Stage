@@ -7,26 +7,25 @@ public class Test {
    }
 
    static boolean isDifferentToSpace(String[][] resRegroupe, int i, int col) {
-      return !resRegroupe[i][col].equals(Item.SPACE);
+      return !resRegroupe[i][col].equals(Config.SPACE);
    }
    
    static boolean isEqualToYes(String[][] resRegroupe, int i, int col) {
-      return resRegroupe[i][col].equals(Item.OUI);
+      return resRegroupe[i][col].equals(Config.OUI);
    }
 
    static boolean isDifferentToNo(String[][] res, int i, int j) {
-      return !res[i][j].equals(Item.NON);
+      return !res[i][j].equals(Config.NON);
    }
 
    static boolean isDifferentToEmpty(String[] fiche, int i) {
-      return !fiche[i].equals(Item.EMPTY);
+      return !fiche[i].equals(Config.EMPTY);
    }
     
     static boolean isConditionVerified(String[] fiche) {
-      return isDifferentToEmpty(fiche, Item.VI)
-            && isDifferentToEmpty(fiche, Item.VII)
-            && isDifferentToEmpty(fiche, Item.IX)
-            && isDifferentToEmpty(fiche, Item.X);
+      return isDifferentToEmpty(fiche, Config.III)
+            && isDifferentToEmpty(fiche, Config.IV)
+            && isDifferentToEmpty(fiche, Config.VI)
+            && isDifferentToEmpty(fiche, Config.VII);
    }
-
 }   
