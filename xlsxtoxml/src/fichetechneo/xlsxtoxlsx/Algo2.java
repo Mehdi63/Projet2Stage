@@ -1,4 +1,4 @@
-package projetstage;
+package fichetechneo.xlsxtoxlsx;
 
 import java.io.IOException;
 
@@ -27,7 +27,7 @@ public class Algo2 {
    static void toRefactor(int i, int cpt, String[] fiche, String[][] resRegroupe) {
       
       if (Test.isEqualToYes(resRegroupe, i, cpt)) {
-         fiche[Config.IX] += Config.EQUIPEMENTS[cpt - Config.MCCCLIII] + ", ";
+         fiche[Config.VIII] += Config.APPLICATIONS[cpt - Config.MCCCLIII] + ", ";
       }
    }
 
@@ -43,7 +43,7 @@ public class Algo2 {
    static void fillAnArrays1(String[] fiche, int i, String[][] resRegroupe) {
       
       fiche[Config.O] = resRegroupe[i][Config.CXXVI];
-    if (fiche[Config.O].equals(ICCF)) {
+      if (fiche[Config.O].equals(ICCF)) {
          fiche[Config.I] = resRegroupe[i][Config.CXXVIII];
       } else if (fiche[Config.O].equals(LAMP)) {
          fiche[Config.I] = resRegroupe[i][Config.CXXIX];
@@ -136,7 +136,6 @@ public class Algo2 {
    static void fillAnArrays5(String[] fiche, int i, String[][] resRegroupe) {
       
     fiche[Config.VIII]=Config.EMPTY;
-    fiche[Config.IX]=Config.EMPTY;
     if (Test.isDifferentToSpace(resRegroupe, i, Config.MCCCVII)) {
          fiche[Config.VIII] += resRegroupe[i][Config.MCCCVII] + ", ";
       }
@@ -148,7 +147,7 @@ public class Algo2 {
          toRefactor(i, cpt, fiche, resRegroupe);
       }
       if (resRegroupe[i][Config.MCDIX].equals(Config.OUI)) {
-         fiche[Config.IX] += resRegroupe[i][Config.MCDX] + ", ";
+         fiche[Config.VIII] += resRegroupe[i][Config.MCDX] + ", ";
       }
 
       fiche[Config.XI] = Config.CONTACTEXPERT[i][Config.O];
@@ -166,14 +165,13 @@ public class Algo2 {
    
    static void toGenerate(String[] fiche) throws IOException {
       if (Test.isConditionVerified(fiche)) {
-         String xlsxFile = "C:/Users/elhaddad/Documents/fiche_"+fiche[Config.I]+".xlsx";
-         String[][] cellule = new String [Config.XIX][Config.II];
-         for(int j=Config.O; j<Config.XIX; j++){
+         String xlsxFile = "C:/Users/elhaddad/Documents/Fiches à valider/"+fiche[Config.I]+".xlsx";
+         String[][] cellule = new String [Config.XXIII][Config.II];
+         for(int j=Config.O; j<fiche.length; j++){
             cellule[j][Config.O] = Config.TITLE[j];
             cellule[j][Config.I] = fiche[j];
          }
          ReadWriteExcelFile.writeXlsxFile(xlsxFile, cellule);
-         WriteXMLFile.generer(fiche, fiche[Config.XXII]);
       }
     }
 }

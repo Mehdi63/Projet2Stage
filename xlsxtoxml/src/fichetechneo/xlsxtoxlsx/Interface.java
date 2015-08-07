@@ -1,4 +1,4 @@
-package projetstage;
+package fichetechneo.xlsxtoxlsx;
 
 import java.io.IOException;
 import java.util.logging.Logger;
@@ -22,6 +22,6 @@ public class Interface {
          resRegroupe = Algo1.initialiser(numCols);
          resRegroupe = Algo1.traiter(numRows, res, resRegroupe);
          Algo2.remplir(resRegroupe);
-         LOG.info("'Techneo Fiche' file(s) has been generated.");
+         LOG.info("Les fiches de competences (.xslx) ont été générées!");
    }
 }

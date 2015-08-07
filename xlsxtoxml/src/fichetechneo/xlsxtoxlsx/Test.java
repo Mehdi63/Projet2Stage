@@ -1,4 +1,4 @@
-package projetstage;
+package fichetechneo.xlsxtoxlsx;
 
 public class Test {
 
@@ -17,7 +17,10 @@ public class Test {
    static boolean isDifferentToNo(String[][] res, int i, int j) {
       return !res[i][j].equals(Config.NON);
    }
-
+   
+   public static boolean isEqualToEmpty(String[] res, int i){
+       return res[i].equals(Config.EMPTY);
+   }
    static boolean isDifferentToEmpty(String[] fiche, int i) {
       return !fiche[i].equals(Config.EMPTY);
    }

@@ -1,4 +1,4 @@
-package projetstage;
+package fichetechneo.xlsxtoxlsx;
 
 public class Algo1 {
 

@@ -1,4 +1,4 @@
-package projetstage;
+package fichetechneo.xlsxtoxlsx;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -26,7 +26,7 @@ public class WriteXMLFile {
       }
    }
 
-   static void generer(String[] fiche, String type) {
+   public static void generer(String[] fiche, String type) {
 
       String xmlFile = "C:/Users/elhaddad/Documents/Annuaire de Compétence/fiche_"
             + fiche[Config.I] + ".xml";
@@ -45,119 +45,126 @@ public class WriteXMLFile {
       entityId.addContent(fiche[Config.XXI]);
       Element title = new Element("title");
       competence.addContent(title);
-      CDATA cdatatitle = new CDATA(fiche[Config.I]);
-      title.addContent(cdatatitle);
+      CDATA cDatatitle = new CDATA(fiche[Config.I]);
+      title.addContent(cDatatitle);
       Element savoirfaire = new Element("savoir_faire");
       competence.addContent(savoirfaire);
+      CDATA cDataSavoirfaire = new CDATA(fiche[Config.II]);
+      savoirfaire.addContent(cDataSavoirfaire);
       Element applications = new Element("applications");
       competence.addContent(applications);
-      CDATA cdataAppli = new CDATA(fiche[Config.IX]);
-      applications.addContent(cdataAppli);
+      CDATA cDataAppli = new CDATA(fiche[Config.VIII]);
+      applications.addContent(cDataAppli);
       Element equipment = new Element("equipment");
       competence.addContent(equipment);
-      CDATA cdataEquip = new CDATA(Config.EMPTY);
-      equipment.addContent(cdataEquip);
+      CDATA cDataEquip = new CDATA(fiche[Config.IX]);
+      equipment.addContent(cDataEquip);
       Element samples = new Element("samples");
       competence.addContent(samples);
       Element prestationtype = new Element("prestation_type");
       competence.addContent(prestationtype);
-      CDATA cdataPrestationType = new CDATA("Recherche et Développement");
-      prestationtype.addContent(cdataPrestationType);
-      Element contactexpert = new Element("contact_expert");
-      competence.addContent(contactexpert);
+      CDATA cDataPrestationType = new CDATA(fiche[Config.X]);
+      prestationtype.addContent(cDataPrestationType);
+      Element contactExpert = new Element("contact_expert");
+      competence.addContent(contactExpert);
       Element language2 = new Element(Config.LANGUAGE);
-      contactexpert.addContent(language2);
+      contactExpert.addContent(language2);
       language2.setText(Config.FR);
       Element civility1 = new Element(Config.CIVILITY);
-      contactexpert.addContent(civility1);
-      CDATA cdataCivility = new CDATA(fiche[Config.XI]);
-      civility1.addContent(cdataCivility);
+      contactExpert.addContent(civility1);
+      CDATA cDataCivility = new CDATA(fiche[Config.XI]);
+      civility1.addContent(cDataCivility);
       Element surname1 = new Element(Config.SURNAME);
-      contactexpert.addContent(surname1);
-      CDATA cdataSurname = new CDATA(fiche[Config.XII]);
-      surname1.addContent(cdataSurname);
+      contactExpert.addContent(surname1);
+      CDATA cDataSurname = new CDATA(fiche[Config.XII]);
+      surname1.addContent(cDataSurname);
       Element firstname1 = new Element(Config.FIRSTNAME);
-      contactexpert.addContent(firstname1);
-      CDATA cdataFirstName = new CDATA(fiche[Config.XIII]);
-      firstname1.addContent(cdataFirstName);
+      contactExpert.addContent(firstname1);
+      CDATA cDataFirstName = new CDATA(fiche[Config.XIII]);
+      firstname1.addContent(cDataFirstName);
       Element phonenumber1 = new Element(Config.PHONENUMBER);
-      contactexpert.addContent(phonenumber1);
-      CDATA cdataPhoneNumber = new CDATA(fiche[Config.XV]);
-      phonenumber1.addContent(cdataPhoneNumber);
+      contactExpert.addContent(phonenumber1);
+      CDATA cDataPhoneNumber = new CDATA(fiche[Config.XV]);
+      phonenumber1.addContent(cDataPhoneNumber);
       Element faxnumber1 = new Element(Config.FAXNUMBER);
-      contactexpert.addContent(faxnumber1);
+      contactExpert.addContent(faxnumber1);
       Element email1 = new Element(Config.EMAIL);
-      CDATA cdataEmail = new CDATA(fiche[Config.XIV]);
-      email1.addContent(cdataEmail);
-      contactexpert.addContent(email1);
+      CDATA cDataEmail = new CDATA(fiche[Config.XIV]);
+      email1.addContent(cDataEmail);
+      contactExpert.addContent(email1);
       Element function1 = new Element(Config.FUNCTION);
-      contactexpert.addContent(function1);
-      Element contactinterface = new Element("contact_interface");
-      competence.addContent(contactinterface);
+      contactExpert.addContent(function1);
+      Element contactInterface = new Element("contact_interface");
+      competence.addContent(contactInterface);
       Element language3 = new Element(Config.LANGUAGE);
-      contactinterface.addContent(language3);
+      contactInterface.addContent(language3);
       Element civility2 = new Element(Config.CIVILITY);
-      contactinterface.addContent(civility2);
+      contactInterface.addContent(civility2);
       Element surname2 = new Element(Config.SURNAME);
-      contactinterface.addContent(surname2);
+      contactInterface.addContent(surname2);
       Element firstname2 = new Element(Config.FIRSTNAME);
-      contactinterface.addContent(firstname2);
+      contactInterface.addContent(firstname2);
       Element phonenumber2 = new Element(Config.PHONENUMBER);
-      contactinterface.addContent(phonenumber2);
+      contactInterface.addContent(phonenumber2);
       Element faxnumber2 = new Element(Config.FAXNUMBER);
-      contactinterface.addContent(faxnumber2);
+      contactInterface.addContent(faxnumber2);
       Element email2 = new Element(Config.EMAIL);
-      contactinterface.addContent(email2);
+      contactInterface.addContent(email2);
       Element function2 = new Element(Config.FUNCTION);
-      contactinterface.addContent(function2);
+      contactInterface.addContent(function2);
       Element brevets = new Element("brevets");
       competence.addContent(brevets);
-      CDATA cdataBrevets = new CDATA(fiche[Config.XVIII]);
-      brevets.addContent(cdataBrevets);
-      Element certificationsetagrement = new Element(
+      CDATA cDataBrevets = new CDATA(fiche[Config.XIX]);
+      brevets.addContent(cDataBrevets);
+      Element certificationsEtAgrement = new Element(
             "certifications_et_agrement");
-      competence.addContent(certificationsetagrement);
+      competence.addContent(certificationsEtAgrement);
+      CDATA cDataCertification = new CDATA(fiche[Config.XVII]); 
+      certificationsEtAgrement.addContent(cDataCertification);
       Element polescompetitivite = new Element("poles_competitivite");
       competence.addContent(polescompetitivite);
       Element technoscles2010 = new Element("technos_cles_2010");
       competence.addContent(technoscles2010);
       Element url = new Element(Config.URL1);
-      CDATA cdataUrl = new CDATA(fiche[Config.XVI]);
-      url.addContent(cdataUrl);
+      url.addContent(fiche[Config.XVI]);
       competence.addContent(url);
       Element interventionsector = new Element("intervention_sector");
       competence.addContent(interventionsector);
-      CDATA cdataSecteur = new CDATA(fiche[Config.VI]);
-      interventionsector.addContent(cdataSecteur);
+      CDATA cDataSecteur = new CDATA(fiche[Config.VI]);
+      interventionsector.addContent(cDataSecteur);
       Element interventionsubsector = new Element("intervention_subsector");
       competence.addContent(interventionsubsector);
-      CDATA cdataSousSecteur = new CDATA(fiche[Config.VII]);
-      interventionsubsector.addContent(cdataSousSecteur);
+      CDATA cDataSousSecteur = new CDATA(fiche[Config.VII]);
+      interventionsubsector.addContent(cDataSousSecteur);
       if(type.equals(Config.TECHNOLOGIQUE)){
          Element technoDomain = new Element("techno_domain");
          competence.addContent(technoDomain);
-         CDATA cdataDomaine = new CDATA(fiche[Config.III]);
-         technoDomain.addContent(cdataDomaine);
+         CDATA cDataDomaine = new CDATA(fiche[Config.III]);
+         technoDomain.addContent(cDataDomaine);
          Element technoSubDomain = new Element("techno_subdomain");
          competence.addContent(technoSubDomain);
-         CDATA cdataSousDomaine = new CDATA(fiche[Config.IV]);
-         technoSubDomain.addContent(cdataSousDomaine);
+         CDATA cDataSousDomaine = new CDATA(fiche[Config.IV]);
+         technoSubDomain.addContent(cDataSousDomaine);
       }
       if(type.equals(Config.SHS)){
           Element technoDiscipline = new Element("shs_discipline");
           competence.addContent(technoDiscipline);
-          CDATA cdataDiscipline = new CDATA(fiche[Config.III]);
-          technoDiscipline.addContent(cdataDiscipline);
+          CDATA cDataDiscipline = new CDATA(fiche[Config.III]);
+          technoDiscipline.addContent(cDataDiscipline);
           Element technoSubDiscipline = new Element("shs_subdiscipline");
           competence.addContent(technoSubDiscipline);
-          CDATA cdataSousDiscipline = new CDATA(fiche[Config.IV]);
-          technoSubDiscipline.addContent(cdataSousDiscipline);
+          CDATA cDataSousDiscipline = new CDATA(fiche[Config.IV]);
+          technoSubDiscipline.addContent(cDataSousDiscipline);
        } 
       Element keywords = new Element("keywords");
       competence.addContent(keywords);
+      CDATA cDataKeywords = new CDATA(fiche[Config.V]);
+      keywords.addContent(cDataKeywords);
       Element carnotmines = new Element("carnot_mines");
       competence.addContent(carnotmines); 
-
+      CDATA cDataCarnotMines = new CDATA(fiche[Config.XVIII]);
+      carnotmines.addContent(cDataCarnotMines);
+      
       enregistrer(document, xmlFile);
    }
 }

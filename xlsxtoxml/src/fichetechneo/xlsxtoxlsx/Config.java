@@ -1,4 +1,4 @@
-package projetstage;
+package fichetechneo.xlsxtoxlsx;
 
 import java.util.Arrays;
 import java.util.List;
@@ -188,7 +188,7 @@ public class Config {
          "Adrenal tumours & adipose tissue homeostasis",
          NONAPPLICABLE,
          "Interactions hôtes-parasites",
-         "Communautés microbiennes : écotoxicologie-santé",
+         "Communautés microbiennes (écotoxicologie-santé)",
          "Microbiologie de l’environnement et bioinformatique",
          "Virus et Métabolismes microbiens en milieu aquatique",
          "Interactions dans les réseaux trophiques aquatiques",
@@ -233,10 +233,10 @@ public class Config {
          "Le Centre International Blaise Pascal",
          "Équipe Imaginaire et Lettres du XVIe siècle",
          NONAPPLICABLE,
-         "L’opposition dans la Cité : objets, acteurs, formes",
+         "L’opposition dans la Cité (objets, acteurs, formes)",
          "Dynamiques culturelles et artistiques",
-         "Plaines et montagnes : sociétés et espaces du Massif Central. Structures, peuplement, patrimoine",
-         "Circulation des hommes et des idées : histoire des connections politiques et culturelles",
+         "Plaines et montagnes sociétés et espaces du Massif Central (Structures, peuplement, patrimoine)",
+         "Circulation des hommes et des idées (histoire des connections politiques et culturelles)",
          NONAPPLICABLE,
          "Paléoenvironnement et Géoarchéologie",
          "Dynamiques Géoenvironnementales Actuelles",
@@ -256,7 +256,7 @@ public class Config {
          "Histoire des systèmes",
          "Raison et savoirs pratiques",
          NONAPPLICABLE,
-         "« Mondes sociaux » des petites entreprises, ressources humaines et marché du travail",
+         "Mondes sociaux (petites entreprises, ressources humaines et marché du travail)",
          "Gouvernance, information et organisations responsables",
          "Management de la chaine de valeur et pilotage de la performance",
          "Management des situations extrêmes", NONAPPLICABLE };
@@ -1252,7 +1252,7 @@ public class Config {
          "Organisation et ingénierie du transport ferroviaire (service)",
          "Plaisance", AUTRE };
 
-   public static final String[] EQUIPEMENTS = {
+   public static final String[] APPLICATIONS = {
          "Plateforme géomatique pour l'intelligence de la donnée spatiale - INTELESPACE",
          COMMENTAIRE,
          "Microsystèmes Capteurs Chimiques - MS2C",
@@ -1635,13 +1635,13 @@ public class Config {
          EMPTY, EMPTY, EMPTY, null };
 
    public static final String[] TITLE = { "Titre de la compétence", "Entite",
-         "Savoir-faire", "Domaine", "Sous-domaine", "mots-clés", "Secteur",
-         "Sous-secteur", "Equipements",
-         "Applications et exemple de réalisations", "Type de prestation",
+         "Savoir-faire", "Domaine/Discipline", "Sous-domaine/Sous_discipline", "mots-clés", "Secteur",
+         "Sous-secteur", "Applications et exemple de réalisations",
+         "Equipements",  "Type de prestation", 
          "Civilité-contact expert", "Firstname-contact expert",
          "Surname-contact expert", "Email-contact expert",
          "Tel-contact expert", "URL", "Certification/Label/Agrément",
-         "Institut Carnot ou IRT ou IEED ou SRC", "Brevets" };
+         "Institut Carnot ou IRT ou IEED ou SRC", "Brevets", "id", "entity_id", "type" };
 
    private Config() {
    }
